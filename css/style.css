@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Public+Sans:wght@400;700&display=swap');
+
+:root {
+    --dark-pink: hsla(337, 48%, 49%, 1);
+    --link-water-white: hsla(207, 58%, 99%, 1);
+    --san-juan-blue: hsla(207, 33%, 32%, 1);
+    --light-san-juan-blue: hsla(207, 16%, 50%, 1);
+    --mirage-blue: hsla(207, 28%, 15%, 1);
+    --charm-pink-active: hsla(337, 59%, 64%, 1);
+}
+
+html, body {
+    margin: 0;
+	padding: 0;
+	border: 0;
+    box-sizing: border-box;
+}
+
+/* general request demo button style */
+
+/* general submit button style */

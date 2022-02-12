@@ -1,7 +1,189 @@
+@import url(/css/style.css);
+
+header {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-background-blue);
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 1.5rem;
+}
+
+.logo {
+    margin: 0 0 1rem 1rem;
+}
+
+.logo img {
+    min-width: 8.438rem;
+}
+
+.open-menu {
+    margin-left: auto;
+}
+
+.open-menu img {
+    min-width: 1.75rem;
+    margin-right: auto;
+}
+
+/* hero section */
+
+.home-hero-wrapper, .home-hero-text-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-hero-text-button-wrapper {
+    margin: 3rem auto;
+}
+
+.home-hero-image-wrapper img {
+    width: 8rem;
+}
+
+.home-hero-text-button-wrapper h1, .home-hero-text-button-wrapper p {
+    text-align: center;
+}
+
+.contact-span {
+    font-weight: 700;
+}
+
+/* testimonials & who we work with section */
+
+.testimonials-wrapper {
+    background-color: var(--mirage-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .home-brand-logo-wrapper {
-    background-color: rgba(27, 38, 47, 1);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 5rem auto 2rem auto;
+}
+
+.home-brand-logo-wrapper img {
+    width: 6.688rem;
+}
+
+.testimonials-text-and-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto 5rem auto;
+}
+
+.testimonials-text-and-button h1, .testimonials-text-and-button p {
+    text-align: center;
+    color: hsla(207, 58%, 99%, 1);
+}
+
+.testimonials-text-and-button form {
+    margin-top: 2rem;
+}
+
+/* how to implement section */
+.code-ui-wrapper {
+    background-color: var(--light-background-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.code-illustration img {
+    width: 25rem;
+    
+}
+
+.code-ui-image img {
+    width: 23rem;
+}
+
+.code-ui-text-1, .code-ui-text-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* use cases section */
+
+.use-cases-wrapper {
+    background-color: var(--light-background-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.use-case {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.use-case-illustration {
+    width: 6.625rem;
+}
+
+.use-case h2 {
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+/* cta at the bottom of the screen */
+.home-cta-wrapper {
+    background-color: var(--light-background-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-body-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 3rem auto;
+}
+
+/* footer */
+footer, .footer-wrapper, .logo-text-footer-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    background-color: var(--mirage-blue);
 }
 
 .footer-wrapper {
-    background-color: grey;
+    gap: min(1.9rem);
+    margin: 3rem auto;
+}
+
+.logo-text-footer-div {
+    gap: min(1.9rem);
+    margin: 0 auto;
+}
+
+.logo-text-footer-div img {
+    width: 8.438rem;
+}
+
+.social-icons-footer-div {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
 }

@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Public+Sans:wght@400;700&display=swap');
 
 :root {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 16px;
     --dark-pink: hsla(337, 48%, 49%, 1);
     --link-water-white: hsla(207, 58%, 99%, 1);
     --san-juan-blue: hsla(207, 33%, 32%, 1);
     --light-san-juan-blue: hsla(207, 16%, 50%, 1);
     --mirage-blue: hsla(207, 28%, 15%, 1);
     --charm-pink-active: hsla(337, 59%, 64%, 1);
+    --light-background-blue: rgba(237,243,248,255);
 }
 
 html, body {
@@ -16,6 +19,143 @@ html, body {
     box-sizing: border-box;
 }
 
+h1, h2, h3 {
+    font-family: 'DM Serif Display', serif;
+    color: var(--san-juan-blue);
+}
+
+h1 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+}
+
+p {
+    font-weight: 400;
+    font-size: 0.938rem;
+    line-height: 1.75rem;
+    color: var(--san-juan-blue);
+}
+
+a {
+    text-decoration: none;
+    color: hsla(207, 58%, 99%, 1);
+}
+
 /* general request demo button style */
+.general-form {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    max-width: 27.813rem;
+    /* box shadow */
+}
+
+.general-form input, .general-form button {
+    border: none;
+    border-radius: 25px;
+    height: 3rem;
+    max-width: 20.438rem;
+}
+
+.general-form input::placeholder {
+    padding-left: 1.5rem;
+    font-weight: 700;
+    background-color: #fff;
+    
+}
+
+.general-form input {
+    color: var(--san-juan-blue);
+}
+
+.general-form input::placeholder {
+    color: rgba(169,182,192,255);
+}
+
+.general-form button {
+    background-color: var(--dark-pink);
+    color: #fff;
+    font-weight: 700;
+}
+
+.general-form button:hover {
+    cursor: pointer;
+    background-color: var(--charm-pink-active);
+}
+
+.general-form button:active {
+    opacity: 75%;
+}
 
 /* general submit button style */
+.general-button-2 {
+    width: 8.063rem;
+    height: 3rem;
+    border-radius: 25px;
+    font-size: 0.938rem;
+    border-width: 2px;
+    cursor: pointer;
+}
+
+.general-button-2-dark {
+    background-color: var(--mirage-blue);
+    border: 2px solid #fff;
+    color: white;
+}
+
+.general-button-2-dark:hover {
+    background-color: #fff;
+    color: var(--mirage-blue);
+    border-color: var(--mirage-blue);
+}
+
+.general-button-2-dark:active {
+    opacity: 75%;
+}
+
+.general-button-2-light {
+    background-color: white;
+    border: 2px solid var(--mirage-blue);
+    color: var(--mirage-blue);
+}
+
+/* styling for different screens using 30rem/479px as the assumed start of mobile screen sizes, 48rem/767px 
+as start of tablet screen sizes and 64rem/1024px as the start of desktop screen */
+
+@media only screen and (min-width: 48rem) {
+    .general-form {
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+        max-width: 27.813rem;
+        background-color: #fff;
+        border-radius: 25px;
+    }
+    
+    .general-form button {
+        height: 3rem;
+        max-width: 10.813rem;
+    }
+
+    .general-form button {
+        margin-left: auto;
+    }
+}
+
+/* text sizing for tablet screens */
+
+@media only screen and (min-width: 48rem) and (max-width: 63.938rem) {
+    h1 {
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+}
+
+/* text sizing for desktop screens */
+
+@media only screen and (min-width: 64rem) {
+    h1 {
+        font-size: 4.5rem;
+        line-height: 4.5rem;
+    }
+}

@@ -31,7 +31,7 @@ nav {
     margin-right: auto;
 }
 
-.home-header-circle {
+/* .home-header-circle {
     height: 62rem;
     width: 62rem;
     background-color: rgba(208,217,226,255);
@@ -39,7 +39,7 @@ nav {
     position: absolute;
     top: -110%;
     right: -22%;
-}
+} */
 
 
 /* hero section */
@@ -61,6 +61,30 @@ nav {
 
 .home-hero-text-button-wrapper {
     margin: .5rem auto;
+}
+
+@media only screen and (min-width: 48rem) {
+    .home-hero-text-button-wrapper {
+        max-width: 35.813rem;
+    }
+}
+
+@media only screen and (min-width: 64rem) {
+    .home-hero-wrapper {
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .home-hero-image-wrapper, .home-hero-text-button-wrapper {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    /* .home-hero-image-wrapper img {
+        width: 16.438rem;
+        height: 31.25rem;
+    } */
 }
 
 .home-hero-image-wrapper img {
@@ -109,6 +133,51 @@ nav {
     margin-top: 2rem;
 }
 
+@media only screen and (min-width: 48rem) {
+    .home-brand-logo-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 3.875rem;
+        row-gap: 2.875rem;
+        margin: 5.5rem 7.25rem 4rem 7.25rem;
+        max-width: 33.5rem;
+    }
+
+    .testimonials-text-and-button {
+        margin-left: 9.75rem;
+        margin-right: 9.75rem;
+    }
+}
+
+@media only screen and (min-width: 64rem) {
+    .testimonials-wrapper {
+        flex-direction: row-reverse;
+        align-items: flex-start;
+    }
+
+    .testimonials-text-and-button {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .testimonials-text-and-button h1, .testimonials-text-and-button p {
+        text-align: left;
+    }
+
+    .home-brand-logo-wrapper {
+        margin: 11.563rem 10.188rem 11.563rem 0;
+    }
+
+    .testimonials-text-and-button {
+        margin: 6.25rem 8rem 6.25rem 10.313rem;
+    }
+
+    .testimonials-text-and-button h1 {
+        font-size: 3rem;
+    }
+}
+
 /* how to implement section */
 .code-ui-wrapper {
     background-color: var(--light-background-blue);
@@ -118,14 +187,8 @@ nav {
     margin: 0 auto;
 }
 
-.code-illustration {
-    text-align: center;
-    
-}
-
 .code-illustration img {
     width: 25rem;
-    margin: 0 auto;
 }
 
 .code-ui-image img {
@@ -137,6 +200,13 @@ nav {
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+
+@media only screen and (min-width: 48rem) {
+    .code-ui-text-1, .code-ui-text-2 {
+        margin-left: 6.125rem;
+        margin-right: 6.125rem;
+    }
 }
 
 /* use cases section */
@@ -165,6 +235,14 @@ nav {
     font-weight: 700;
 }
 
+@media only screen and (min-width: 48rem) {
+    .use-cases-wrapper {
+        padding: 6.25rem 2.5rem 6.25rem 2.5rem;
+        flex-direction: row;
+        gap: 0.625rem;
+    }
+}
+
 /* cta at the bottom of the screen */
 .home-cta-wrapper {
     background-color: var(--light-background-blue);
@@ -179,6 +257,12 @@ nav {
     align-items: center;
     text-align: center;
     margin: 3rem auto;
+}
+
+@media only screen and (min-width: 48rem) {
+    .home-cta-wrapper {
+        padding: 0 10.063rem 6.25rem 10.063rem;
+    }
 }
 
 /* footer */
@@ -211,3 +295,4 @@ footer {
     flex-direction: row;
     gap: 1rem;
 }
+

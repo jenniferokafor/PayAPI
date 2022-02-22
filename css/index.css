@@ -273,7 +273,7 @@ nav {
 
 @media only screen and (min-width: 64rem) {
     .use-cases-wrapper {
-        padding: 6.25rem 10.313rem 6.25rem 10.313rem;
+        padding: 6.25rem 10.313rem 6rem 10.313rem;
     }
 }
 
@@ -296,6 +296,21 @@ nav {
 @media only screen and (min-width: 48rem) {
     .home-cta-wrapper {
         padding: 0 10.063rem 6.25rem 10.063rem;
+    }
+}
+
+@media only screen and (min-width: 64rem) {
+    .home-cta-wrapper {
+        padding: 0 10.313rem 6rem 10.313rem;
+    }
+    
+    .home-body-cta {
+        flex-direction: row;
+        gap: 20vw;
+    }
+
+    .home-body-cta h1 {
+        font-size: 3rem;
     }
 }
 
@@ -329,4 +344,24 @@ footer {
     flex-direction: row;
     gap: 1rem;
 }
+
+@media only screen and (min-width: 48rem) {
+    .footer-wrapper, .logo-text-footer-div {
+        flex-direction: row;
+    }
+
+    .footer-wrapper {
+        margin: 1.938rem 2.5rem 1.938rem 2.438rem;
+        padding: 0;
+        gap: 15vw;
+    }
+}
+
+@media only screen and (min-width: 64rem) {
+    .footer-wrapper {
+        margin: 1.938rem 10.313rem 1.938rem 10.313rem;
+        gap: 35vw;
+    }
+}
+
 

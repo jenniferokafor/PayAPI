@@ -23,7 +23,7 @@ body {
     overflow-x: hidden;
 }
 
-/* styling for different screens using 30rem/479px as the assumed start of mobile screen sizes, 48rem/767px 
+/* styling for different screens using 48rem/767px 
 as start of tablet screen sizes and 64rem/1024px as the start of desktop screen */
 
 h1, h2, h3 {
@@ -288,21 +288,26 @@ footer {
 }
 
 @media only screen and (min-width: 48rem) {
+    .logo-text-footer-div {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     .footer-wrapper, .logo-text-footer-div {
         flex-direction: row;
     }
 
     .footer-wrapper {
         margin: 1.938rem 2.5rem 1.938rem 2.438rem;
-        padding: 0;
-        gap: 15vw;
+        width: 100%;
+        justify-content: space-around;
     }
 }
 
 @media only screen and (min-width: 64rem) {
     .footer-wrapper {
         margin: 1.938rem 10.313rem 1.938rem 10.313rem;
-        gap: 35vw;
+        width: 100%;
     }
 }
 

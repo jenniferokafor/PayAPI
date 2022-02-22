@@ -1,0 +1,158 @@
+@import url(/css/style.css);
+
+body {
+    background-color: var(--light-background-blue);
+}
+
+.top-pricing-h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.pricing-info-table, .plans {
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-info-table {
+    gap: 3rem;
+}
+
+.plans {
+    align-items: center;
+}
+
+.plans h2 {
+    font-size: 1.5rem;
+    color: var(--dark-pink);
+    margin-bottom: 5rem;
+}
+
+.plans h3 {
+    display: none;
+}
+
+.plan-amount {
+    font-size: 3.5rem;
+    color: var(--san-juan-blue);
+    font-family: 'DM Serif Display', serif;
+}
+
+.plan-features {
+    list-style: none;
+}
+
+.plan-features li {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-left: -1.5rem;
+}
+
+hr {
+    width: 20.438rem;
+    border-top: 1px solid rgba(192,203,213,255);
+}
+
+
+@media only screen and (min-width: 48rem) {
+    .top-pricing-h1 {
+        margin-bottom: 4rem;
+    }
+
+    .pricing-info-table {
+        display: flex;
+        flex-direction: row;
+        gap: 0.625rem;
+        justify-content: center;
+        margin-left: 2.438rem;
+        margin-right: 2.5rem;
+        padding: 0;
+    }
+
+    .plans {
+        gap: 1rem;
+    }
+
+    .plans h2 {
+        margin-bottom: 0;
+    }
+
+    .plans h3 {
+        display: initial;
+        font-family: 'Public Sans', sans-serif;
+        font-size: 0.938rem;
+        font-weight: 400;
+        color: rgba(108,130,149,255);
+        max-width: 13.938rem;
+        text-align: center;
+    }
+
+    hr {
+        width: 13.938rem;
+    }
+}
+
+@media only screen and (min-width: 64rem) {
+    .pricing-info-table {
+        gap: 1rem;
+    }
+
+    .top-pricing-h1 {
+        text-align: left;
+        margin-left: 10.313rem;
+        font-size: 3.5rem;
+    }
+    
+    .pricing-info-table {
+        margin-left: 10.313rem;
+        margin-right: 10.313rem;
+        gap: 1.875rem;
+    }
+    
+    .plans {
+        align-items: flex-start;
+    }
+
+    .plans h2, .plans h3 {
+        text-align: left;
+    }
+
+    .plans h3 {
+        max-width: 21.875rem;
+    }
+
+    hr {
+        width: 18rem;
+    }
+}
+
+/* up to 1160px */
+
+@media only screen and (min-width: 73rem) {
+    .top-pricing-h1 {
+        text-align: left;
+        margin-left: 10.313rem;
+    }
+    
+    .pricing-info-table {
+        margin-left: 10.313rem;
+        margin-right: 10.313rem;
+        gap: 1.875rem;
+    }
+    
+    hr {
+        width: 21.875rem;
+    }
+}
+
+
+/* removing icons and making transparent the features not available in each plan */
+
+.unavail-icon {
+    visibility: hidden;
+}
+
+.unavail-feature {
+    color: #8e9fae;
+}

@@ -1,0 +1,96 @@
+@import url(/css/style.css);
+
+body {
+    background-color: var(--light-background-blue);
+}
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+header h2 {
+    text-align: center;
+    margin: 3rem 1.5rem 2.5rem 1.5rem;
+    font-size: 2rem;
+}
+
+.form-portfolio-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* form */
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 20.438rem;
+    margin: 0 1.5rem 5rem 1.5rem;
+}
+
+input,textarea {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid rgba(145,162,178,255);
+    background-color: var(--light-background-blue);
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+input::placeholder,textarea::placeholder {
+    color: rgba(145,162,178,255);
+    letter-spacing: -0.115385px;
+    font-size: 0.938rem;
+}
+
+.checkbox-elements {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.5rem;
+    gap: 1.625rem;
+}
+
+.checkbox-elements input {
+    align-self: center;
+    border: none;
+    cursor: pointer;
+}
+
+.checkbox-elements label {
+    color: var(--mirage-blue);
+    line-height: 1.563rem;
+}
+
+.contact-button {
+    padding: 16px 49px 14px 51px;
+    border-radius: 50px;
+    max-width: 9.5rem;
+    margin-top: 1.5rem;
+}
+
+/* portfolio */
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 1.5rem 0 1.5rem;
+}
+
+.portfolio h3 {
+    color: rgba(101,123,143,255);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.contact-brand-logo-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 3.188rem;
+    row-gap: 2.813rem;
+    max-width: 20.438rem;
+}

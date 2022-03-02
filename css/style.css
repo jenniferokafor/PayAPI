@@ -21,6 +21,7 @@ html, body {
 
 body {
     overflow-x: hidden;
+    background-color: var(--light-background-blue);
 }
 
 /* styling for different screens using 48rem/767px 
@@ -48,30 +49,116 @@ a {
     color: hsla(207, 58%, 99%, 1);
 }
 
-/* top nav */
-nav {
+/* styling the header & nav */
+
+header {
+    margin: 2.5rem 1.5rem;
     display: flex;
     flex-direction: row;
-    margin: 1rem 1.5rem;
-    z-index: 1;
 }
 
-.logo {
-    margin: 0 0 1rem 1rem;
+.menu {
+    margin-left: auto;
+    height: 1rem;
 }
 
-.logo img {
-    min-width: 8.438rem;
+.nav-and-button {
+    width: 80vw;
+    height: 100vh;
+    background: rgba(27, 38, 47, .9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
 }
 
-.open-menu {
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+nav ul li {
+    list-style-type: none;
+    
+}
+
+nav ul li a {
+     color: rgba(251, 252, 254, 1);
+}
+
+
+.nav-button {
+    border: none;
+    border-radius: 25px;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    background-color: var(--dark-pink);
+    color: #fff;
+    font-weight: 700;
+}
+
+.nav-button:hover {
+    cursor: pointer;
+    background-color: var(--charm-pink-active);
+}
+
+.nav-button:active {
+    opacity: 75%;
+}
+
+/* header nav, header form {
+    display: none;
+} */
+
+/* header & nav */
+@media only screen and (min-width: 48rem) {
+header {
+    margin: 2.5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-and-button {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--light-background-blue);
+    height: inherit;
+    width: inherit;
+}
+
+header nav, header form {
+    display: initial;
+}
+
+.menu {
+    display: none;
+}
+
+nav ul {
+    flex-direction: row;
+    gap: 2.5rem;
+}
+
+nav ul li a {
+    color: var(--san-juan-blue);
+}
+
+header form {
     margin-left: auto;
 }
 
-.open-menu img {
-    min-width: 1.75rem;
-    margin-right: auto;
 }
+
+@media only screen and (min-width: 64rem) {
+    header {
+        margin: 2.5rem 10.313rem;
+    }
+
+    nav {
+        margin-left: 4rem;
+    }
+}
+
 
 /* general request demo button style */
 .general-form {

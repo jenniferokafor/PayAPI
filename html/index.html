@@ -9,16 +9,24 @@
     <title>PayAPI Home</title>
 </head>
 <body>
+    <!-- header containing logo and nav assets, will be reused across site -->
     <header class="header">
-    <!-- nav bar containing logo and nav assets, will be reused across site -->
-        <nav> 
-            <div class="logo">
-                <img src="/assets/shared/desktop/logo.svg" alt="payAPI logo">
-            </div>
-            <div class="open-menu">
-                <img src="/assets/shared/mobile/menu.svg" alt="menu">
-            </div>
-        </nav>
+        <a href="/html/index.html"><img src="/assets/shared/desktop/logo.svg" class="logo" alt="payAPI logo"></a>
+        <img src="/assets/shared/mobile/menu.svg" alt="menu icon" class="menu">
+        <div class="nav-and-button">
+            <nav>
+                <ul>
+                    <li><a href="/html/pricing.html">Pricing</a></li>
+                    <li><a href="/html/about.html">About</a></li>
+                    <li><a href="/html/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <form action="/html/contact.html">
+                <button type="submit" class="nav-button">Schedule a demo</button>
+            </form>
+        </div>
+    </header>
+
     <!-- hero section -->
         <div class="home-hero-wrapper">
             
@@ -36,7 +44,6 @@
                 <p class="home-hero-p">Have any questions? <span class="contact-span">Contact Us</span></p>
             </div>
         </div>
-    </header>
     <div class="home-header-circle"></div>
     <!-- testimonials & who we work with section -->
 
@@ -142,5 +149,6 @@
         </div>
     </footer>
 
+<script src="/JS/app.js"></script>
 </body>
 </html>

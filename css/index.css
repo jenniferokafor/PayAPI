@@ -1,36 +1,5 @@
 @import url(/css/style.css);
 
-header {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--light-background-blue);
-    position: relative;
-}
-
-nav {
-    display: flex;
-    flex-direction: row;
-    margin: 1rem 1.5rem;
-    z-index: 1;
-}
-
-.logo {
-    margin: 0 0 1rem 1rem;
-}
-
-.logo img {
-    min-width: 8.438rem;
-}
-
-.open-menu {
-    margin-left: auto;
-}
-
-.open-menu img {
-    min-width: 1.75rem;
-    margin-right: auto;
-}
-
 
 /* hero section */
 
@@ -39,6 +8,10 @@ nav {
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+
+.home-hero-wrapper {
+    background-color: var(--light-background-blue);
 }
 
 

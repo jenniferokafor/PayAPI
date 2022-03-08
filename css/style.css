@@ -73,6 +73,7 @@ header {
     background-color: rgba(27, 38, 47, 1);
     padding-top: 3rem;
     position: absolute;
+    top: 0vh;
     bottom: 0;
     left: 0;
     right: 0;

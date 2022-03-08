@@ -9,17 +9,40 @@
     <title>PayAPI Pricing</title>
 </head>
 <body>
-    <header>
-        <!-- nav bar containing logo and nav assets, will be reused across site -->
-        <nav> 
-            <div class="logo">
-                <img src="/assets/shared/desktop/logo.svg" alt="payAPI logo">
-            </div>
-            <div class="open-menu">
-                <img src="/assets/shared/mobile/menu.svg" alt="menu">
-            </div>
+    <!-- header containing logo and nav assets, will be reused across site -->
+    <header class="header">
+        <a href="/html/index.html"><img src="/assets/shared/desktop/logo.svg" class="logo" alt="payAPI logo"></a>
+        <img src="/assets/shared/mobile/menu.svg" alt="menu icon" class="open-menu">
+        <div class="desktop-active">
+        <nav class="desktop-nav">
+            <ul class="desktop-nav-ul">
+                <li><a href="/html/pricing.html">Pricing</a></li>
+                <li><a href="/html/about.html">About</a></li>
+                <li><a href="/html/contact.html">Contact</a></li>
+            </ul>
         </nav>
+        <form action="/html/contact.html">
+            <button type="submit" class="nav-button">Schedule a demo</button>
+        </form>
+        </div>
     </header>
+
+    <!-- mobile nav page -->
+    <div class="mobile-active">
+        <img src="/assets/shared/mobile/close.svg" alt="close menu icon" class="close-menu">
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="/html/pricing.html">Pricing</a></li>
+                <li><a href="/html/about.html">About</a></li>
+                <li><a href="/html/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <form action="/html/contact.html">
+            <button type="submit" class="nav-button nav-button-mobile">Schedule a demo</button>
+        </form>
+    </div>
+
+    <!-- main content -->
 
     <div class="top-pricing-h1">
         <h1>Pricing</h1>

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Public+Sans:wght@400;700&display=swap');
+@import url(/css/reset.css);
 
 :root {
     font-family: 'Public Sans', sans-serif;
@@ -10,13 +11,6 @@
     --mirage-blue: hsla(207, 28%, 15%, 1);
     --charm-pink-active: hsla(337, 59%, 64%, 1);
     --light-background-blue: rgba(237,243,248,255);
-}
-
-html, body {
-    margin: 0;
-	padding: 0;
-	border: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -50,43 +44,78 @@ a {
 }
 
 /* styling the header & nav */
-
 header {
-    margin: 2.5rem 1.5rem;
     display: flex;
     flex-direction: row;
+    margin: 2.5rem 1.5rem;
+    position: relative;
 }
 
-.menu {
+.open-menu {
+    width: 1.75rem;
+    height: 1.063rem;
     margin-left: auto;
-    height: 1rem;
 }
 
-.nav-and-button {
-    width: 80vw;
+.desktop-active {
+    display: none;
+}
+
+/* mobile nav */
+
+.mobile-active {
     height: 100vh;
-    background: rgba(27, 38, 47, .9);
+    margin-left: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    opacity: 0;
+    gap: 2rem;
+    background-color: rgba(27, 38, 47, 1);
+    padding-top: 3rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translate(-150%);
+    overflow-x: hidden;
 }
 
-nav ul {
+.mobile-active-show {
+    transform: translate(0);
+}
+
+.close-menu {
+    width: 1.75rem;
+    height: 1.063rem;
+    align-self:flex-end;
+    margin-right: 1.688rem;
+    padding-top: 3rem;
+    position: relative;
+}
+
+.close-menu::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    width: 10px;
+    background-color: white;
+
+}
+
+.mobile-nav ul {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 2rem;
+    align-items: center;
 }
 
-nav ul li {
-    list-style-type: none;
-    
+.mobile-nav ul li a {
+    color: rgba(251, 252, 254, 1);
+    font-weight: 700;
 }
-
-nav ul li a {
-     color: rgba(251, 252, 254, 1);
-}
-
 
 .nav-button {
     border: none;
@@ -106,125 +135,112 @@ nav ul li a {
     opacity: 75%;
 }
 
-/* header nav, header form {
-    display: none;
-} */
-
-/* header & nav */
+/* styling header & nav for bigger screens */
 @media only screen and (min-width: 48rem) {
-header {
-    margin: 2.5rem;
-    display: flex;
-    flex-direction: row;
+    .open-menu {
+        display: none;
+    }
+
+    .desktop-active {
+        display: block;
+    }
+
+    header, .desktop-active, .desktop-nav-ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    header {
+        margin: 2.5rem;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .desktop-nav-ul {
+        gap: 2.5rem;
+    }
+
+    .desktop-nav-ul li a {
+        color: var(--san-juan-blue);
+        font-weight: 700;
+    }
+
+    .desktop-active {
+        align-items: center;
+        gap: 3rem;
+    }
 }
 
-.nav-and-button {
-    display: flex;
-    flex-direction: row;
-    background-color: var(--light-background-blue);
-    height: inherit;
-    width: inherit;
-}
-
-header nav, header form {
-    display: initial;
-}
-
-.menu {
-    display: none;
-}
-
-nav ul {
-    flex-direction: row;
-    gap: 2.5rem;
-}
-
-nav ul li a {
-    color: var(--san-juan-blue);
-}
-
-header form {
-    margin-left: auto;
-}
-
-}
 
 @media only screen and (min-width: 64rem) {
     header {
         margin: 2.5rem 10.313rem;
     }
 
-    nav {
-        margin-left: 4rem;
-    }
+    
+
 }
+
 
 
 /* general request demo button style */
 .general-form {
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: 1rem;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    border-radius: 3em;
+    max-width: 20.438rem;
+    background-color: red;
+    overflow: hidden;
 }
 
-.general-form input, .general-form button {
-    border: none;
-    border-radius: 25px;
-    padding: 1rem 5rem 1rem 5rem;
+.form-item {
+    display: flex;
+    flex-direction: column;
+    
 }
 
-.general-form input::placeholder {
-    padding-left: 1.5rem;
-    font-weight: 700;
-    background-color: #fff; 
+.form-input, .form-button {
+    font-family: inherit;
+    border: 0;
 }
 
-.general-form input {
-    color: var(--san-juan-blue);
+.form-input {
+    padding: 1em;
 }
 
-.general-form input::placeholder {
-    color: rgba(169,182,192,255);
+.form-input:focus {
+    outline: none;
 }
 
-.general-form button {
+.form-button {
     background-color: var(--dark-pink);
-    color: #fff;
-    font-weight: 700;
-}
-
-.general-form button:hover {
-    cursor: pointer;
-    background-color: var(--charm-pink-active);
-}
-
-.general-form button:active {
-    opacity: 75%;
+    color: white;
+    padding: 1em 2.25em;
 }
 
 @media only screen and (min-width: 48rem) {
     .general-form {
-        display: flex;
         flex-direction: row;
+        max-width: 27.813rem;
+        border-radius: 3em;
+        background-color: white;
+        overflow: hidden;
         gap: 0;
-        background-color: #fff;
-        border-radius: 25px;
-        box-shadow: 0px 11px 18px -10px rgba(0,0,0,0.18);
     }
 
-    .general-form input {
-        width: 15rem;
-        padding: 1.1rem;
-        margin: 0;
+    .form-item {
+        justify-content: center;
+        flex-grow: 1;
     }
 
-    .general-form button {
-        padding: 1.1rem;
-        width: 10.813rem;
-        margin: 0;
+    .form-button {
+        margin-left: auto;
+        border-radius: 3em;
     }
-
 }
+
 
 /* general ready to start CTA section at the bottom of the screen*/
 

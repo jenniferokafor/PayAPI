@@ -12,20 +12,35 @@
     <!-- header containing logo and nav assets, will be reused across site -->
     <header class="header">
         <a href="/html/index.html"><img src="/assets/shared/desktop/logo.svg" class="logo" alt="payAPI logo"></a>
-        <img src="/assets/shared/mobile/menu.svg" alt="menu icon" class="menu">
-        <div class="nav-and-button">
-            <nav>
-                <ul>
-                    <li><a href="/html/pricing.html">Pricing</a></li>
-                    <li><a href="/html/about.html">About</a></li>
-                    <li><a href="/html/contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <form action="/html/contact.html">
-                <button type="submit" class="nav-button">Schedule a demo</button>
-            </form>
+        <img src="/assets/shared/mobile/menu.svg" alt="menu icon" class="open-menu">
+        <div class="desktop-active">
+        <nav class="desktop-nav">
+            <ul class="desktop-nav-ul">
+                <li><a href="/html/pricing.html">Pricing</a></li>
+                <li><a href="/html/about.html">About</a></li>
+                <li><a href="/html/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <form action="/html/contact.html">
+            <button type="submit" class="nav-button">Schedule a demo</button>
+        </form>
         </div>
     </header>
+
+    <!-- mobile nav page -->
+    <div class="mobile-active">
+        <img src="/assets/shared/mobile/close.svg" alt="close menu icon" class="close-menu">
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="/html/pricing.html">Pricing</a></li>
+                <li><a href="/html/about.html">About</a></li>
+                <li><a href="/html/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <form action="/html/contact.html">
+            <button type="submit" class="nav-button nav-button-mobile">Schedule a demo</button>
+        </form>
+    </div>
 
     <!-- hero section -->
         <div class="home-hero-wrapper">
@@ -37,9 +52,13 @@
 
             <div class="home-hero-text-button-wrapper">
                 <h1 class="home-hero-h1">Start building with our APIs for absolutely free.</h1>
-                <form class="general-form">
-                    <input type="text" placeholder="Enter email address">
-                    <button type="submit">Schedule a Demo</button>
+                <form action="contact.html" class="general-form">
+                    <div class="form-item">
+                    <input type="text" placeholder="Enter email address" class="form-input">
+                    </div>
+
+                    <button type="submit" class="form-button">Schedule a Demo</button>
+                
                 </form>
                 <p class="home-hero-p">Have any questions? <span class="contact-span">Contact Us</span></p>
             </div>
@@ -124,7 +143,7 @@
     <div class="home-cta-wrapper">
         <div class="home-body-cta">
         <h1>Ready to start?</h1>
-        <form class="general-form">
+        <form action="contact.html" class="general-form">
             <input type="text" placeholder="Enter email address">
             <button type="submit">Schedule a Demo</button>
         </form>

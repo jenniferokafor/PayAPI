@@ -177,8 +177,6 @@ header {
         margin: 2.5rem 10.313rem;
     }
 
-    
-
 }
 
 
@@ -187,28 +185,21 @@ header {
 .general-form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-    border-radius: 3em;
-    max-width: 20.438rem;
-    background-color: red;
-    overflow: hidden;
+    gap: .75rem;
 }
 
-.form-item {
-    display: flex;
-    flex-direction: column;
-    
-}
 
 .form-input, .form-button {
+    padding: .85rem 4rem;
     font-family: inherit;
     border: 0;
+    border-radius: 24px;
 }
 
 .form-input {
-    padding: 1em;
+    margin-left: 0;
 }
+
 
 .form-input:focus {
     outline: none;
@@ -217,12 +208,13 @@ header {
 .form-button {
     background-color: var(--dark-pink);
     color: white;
-    padding: 1em 2.25em;
 }
 
 @media only screen and (min-width: 48rem) {
     .general-form {
+        display: flex;
         flex-direction: row;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
         max-width: 27.813rem;
         border-radius: 3em;
         background-color: white;
@@ -231,13 +223,20 @@ header {
     }
 
     .form-item {
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         flex-grow: 1;
+    }
+
+    .form-input {
+        padding: 1em;
     }
 
     .form-button {
         margin-left: auto;
         border-radius: 3em;
+        padding: 1em 2.25em;
     }
 }
 
@@ -245,22 +244,18 @@ header {
 /* general ready to start CTA section at the bottom of the screen*/
 
 .home-cta-wrapper {
-    background-color: var(--light-background-blue);
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-.home-body-cta {
-    display: flex;
-    flex-direction: column;
+    gap: 2rem;
     align-items: center;
     text-align: center;
     margin: 3rem auto;
 }
 
+
 @media only screen and (min-width: 48rem) {
     .home-cta-wrapper {
+        gap: 2.5rem;
         padding: 0 10.063rem 6.25rem 10.063rem;
     }
 }
@@ -270,13 +265,13 @@ header {
         padding: 0 10.313rem 6rem 10.313rem;
     }
 
-    .home-body-cta h1 {
+    .home-cta-wrapper h1 {
         font-size: 3rem;
     }
 }
 
 @media only screen and (min-width: 86rem) {
-    .home-body-cta {
+    .home-cta-wrapper {
         flex-direction: row;
         gap: 20vw;
     }

@@ -1,16 +1,8 @@
 @import url(/css/reset.css);
 @import url(/css/style.css);
 
-body {
-    background-color: var(--light-background-blue);
-}
-
-h3, p {
-    margin: 0;
-}
-
-/* header */
-header h2 {
+/* hero */
+.about-hero {
     text-align: center;
     margin: 3rem 1.5rem 2.5rem 1.5rem;
     font-size: 2rem;

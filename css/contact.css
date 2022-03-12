@@ -1,16 +1,8 @@
 @import url(/css/reset.css);
 @import url(/css/style.css);
 
-body {
-    background-color: var(--light-background-blue);
-}
 
-h1, h2, h3, p {
-    margin: 0;
-    padding: 0;
-}
-
-header h2 {
+.contact-hero {
     text-align: center;
     margin: 3rem 1.5rem 2.5rem 1.5rem;
     font-size: 2rem;
@@ -24,14 +16,14 @@ header h2 {
 
 /* form */
 
-form {
+.main-form {
     display: flex;
     flex-direction: column;
     max-width: 20.438rem;
     margin: 0 1.5rem 5rem 1.5rem;
 }
 
-input,textarea {
+.main-form input,.main-form textarea {
     border-top: none;
     border-left: none;
     border-right: none;
@@ -41,7 +33,7 @@ input,textarea {
     padding-bottom: 1rem;
 }
 
-input::placeholder,textarea::placeholder {
+.main-form input::placeholder,.main-form textarea::placeholder {
     color: rgba(145,162,178,255);
     letter-spacing: -0.115385px;
     font-size: 0.938rem;
